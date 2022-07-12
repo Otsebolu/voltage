@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+:root{
+    --bg-color: peachpuff;
+    --txt-color: crimson;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    background: peachpuff;
+}
+.navbar .navbar-toggler i{
+    color: crimson;
+}
+.navbar .navbar-toggler{
+    border: 3px solid crimson;
+    border-radius: 8px;
+}
+.navbar .navbar-toggler:focus{
+    border: 3px solid crimson;
+    box-shadow: none;
+    outline: none;
+}
+.navbar .navbar-brand{
+    color: crimson;
+    font-weight: 800;
+}
+#navbarSupportedContent a{
+    color: crimson;
+    font-weight: 700;
+    float: right;
+}
+.nav-item .dropdown-menu{
+    background: peachpuff;
+    float: right;
+}
+.nav-item .dropdown-menu .dropdown-item:hover{
+    background: crimson;
+    color: peachpuff !important;
+}
+.navbar form input[type="search"]{
+    box-shadow: none;
+    outline: none;
+    border: none;
+    color: crimson;
+}
+.navbar form input[type="search"]::placeholder{
+    color: crimson;
+}
+.navbar form input[type="search"]:focus{
+    box-shadow: none;
+    outline: none;
+    border: none;
+    color: crimson;
+}
+.navbar .btn-hover{
+    border: solid crimson 2px;
+    color: crimson;
+    box-shadow: none;
+    outline: none;
+}
+.navbar .btn-hover:hover{
+    background: crimson;
+    color: peachpuff;
+}
+.carousel .carousel-indicators button{
+    background: crimson;
+    width: 20px;
+    height: 10px;
+    border-radius: 100%;
+}
+.carousel-control-next i{
+    color: crimson;
+    font-size: 3rem;
+}
+.carousel-control-prev i{
+    color: crimson;
+    font-size: 3rem;
+}
+.carousel-item .carousel-caption h5{
+    /* color: palegreen; */
+    font-weight: 900;
+    font-size: 3rem;
+}
+.carousel-item .carousel-caption p{
+    /* color: palevioletred; */
+    font-weight: 600;
+    font-size: 2rem;
+}
+.cap{
+    text-align: center;
+    color: crimson;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.cap::before{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 1.1rem;
+    background: peachpuff;
+    margin: auto;
+    border-radius: 100%;
+    transform: translateY(70px);
+}
+.cap::after{
+    content: '';
+    display: block;
+    width: 14rem;
+    height: .5rem;
+    background: peachpuff;
+    margin: auto;
+    border-radius: 100%;
+    transform: translateY(10px);
+}
+
+.img{
+    height: 25vh;
+}
+.image{
+    height: 100%;
+    width: 100%;
+    padding-top: 1rem;
+}
+.image img{
+    height: 75%;
+    width: 80%;
+}
+#about p{
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.imge{
+    height: 30vh;
+}
+.foota a{
+    color: white;
+}
+.foota a:hover{
+    color: crimson;
+}
+.foota span:hover{
+    color: crimson;
+}
+/* .foota a:hover i{
+    margin-left: 10px;
+} */
+/* shopcart  */
+.table-box thead{
+    border-bottom: 3px solid peachpuff;
+}
+.table-box img{
+    height: 2rem;
+}
+.table-box input[type="number"] {
+    text-align: center;
+    color: crimson;
+    border: 3px solid peachpuff;
+    outline: none;
+}
+.table-box tr{
+    color: crimson;
+    text-transform: capitalize;
+    text-align: center;
+}
+.table-box button{
+    border: none;
+}
+.table-box .fas{
+    color: crimson;
+}
+/* shopcart done */
+/* checkout  */
+.check-title{
+    text-align: center;
+    text-transform: capitalize;
+    color: peachpuff;
+    font-weight: 900;
+}
+.form-box{
+    color: crimson;
+}
+.form-box input{
+    box-shadow: none;
+    outline: none;
+    border: 1px solid crimson;
+    color: crimson;
+}
+.form-box input:focus{
+    box-shadow: 1px 1px 3px 2px crimson;
+    outline: none;
+    border: 1px solid crimson;
+    color: crimson;
+}
+/* checkout done */
+/* callback  */
+.callback a{
+    background: crimson;
+    color: white;
+    text-transform: capitalize;
+}
+.callback a:hover{
+    background: peachpuff;
+    color: crimson;
+    font-weight: 600;
+}
+/* callback done */
+/* profile-form  */
+.form-text{
+    color: crimson;
+}
+.profile-form input{
+    background: peachpuff;
+    color: crimson;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.profile-form input:focus{
+    background: peachpuff;
+    color: crimson;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.profile-form label{
+    color: crimson;
+    font-weight: 600;
+}
+/* profile-form done */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

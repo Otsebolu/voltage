@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} | Signin Page  {% endblock title %}
+<!--header-->
+{% block header %}   {% include "header.html" %}     {% endblock header %}
+<!--header done-->
+
+{% block content %}     
+<div class="container mb-5">
+    <h1 class="cap">user signin</h1>
+    <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 text-warning pt-5 pb-5">
+      <div class="col-10 col-sm-10 col-md-2 col-lg-3 col-xl-3 d-none d-lg-block">
+        <div class="card border-0">
+          <img src="/img/shoe2.jpg" class="card-img-top rounded-circle mx-auto w-75 imge">
+        </div>
+      </div>
+      <div class="col-10 col-sm-10 col-md-8 col-lg-5 col-xl-5">
+        <div class="profile-form px-lg-3 text-start">
+          <form action="{% url 'signin' %}" method="POST">
+              {% csrf_token %}
+            <div class="mb-2">
+              <div id="textHelp" class="form-text text-capitalize mb-3 form-text">
+                to fast track your transaction, kindly signin or signup.</div>
+              <label for="exampleInputText1" class="form-label">Username</label>
+              <input type="text" name="username" class="form-control" id="exampleInputText1">
+            </div>
+            <div class="mb-2">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+              <div id="textHelp" class="form-text text-capitalize mt-3 form-text">
+                signin to your account or signup to create one.</div>
+            </div>
+            <!-- <button type="submit" class="btn btn-danger mt-4">SignIn</button> -->
+            <button type="submit" class="btn btn-danger mt-4">Signin</button>
+          </form>
+          <!-- <a href="" type="submit" class="btn btn-danger mt-4">SignUp</a> -->
+        </div>
+      </div>
+      <div class="col-10 col-sm-10 col-md-2 col-lg-3 col-xl-3 d-none d-lg-block">
+        <div class="card border-0">
+          <img src="/img/shoe1.jpeg" class="card-img-top rounded-circle mx-auto w-75 imge">
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %} 
+
+
+
+
+  <!-- footer  --> 
+  {% block footer %} {% endblock footer %}
+          
+  <!-- footer done --> 

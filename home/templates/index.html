@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% block title %}  Home  {% endblock title %}
+
+{% block header %}   {% include "header.html" %}     {% endblock header %}
+
+{% block carousel %}  {% include 'carousel.html' %}     {% endblock carousel %} 
+
+
+{% block content %}
+ <!-- main content  -->
+      
+<div class="container">
+    <h1 class="cap">latest footwear</h1>
+    <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 text-warning">
+    {% if vic %}
+      {% for v in vic %}
+        <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+          <div class="card">
+            <img src="{{v.img.url}}" class="card-img-top img">
+            <div class="card-body">
+              <h5 class="card-title text-capitalize">Name: {{v.title}}</h5>
+              <p class="card-text">Price: {{v.price}}</p>
+              <p class="card-text ">Description: {{v.description}}</p>
+              <a href="{% url 'products' %}" class="btn btn-warning text-white w-100">Add to Cart</a> 
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+      <!-- <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/shoe1.jpeg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">Shoe2</h5>
+            <p class="card-text  text-truncate">Buy these here!!</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/shoe2.jpg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">Shoe3</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/lady.jpg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">shoe4</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/shoe1.jpeg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">shoe5</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/shoe2.jpg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">shoe6</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/lady.jpg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/shoe2.jpg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/shoe1.jpeg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/lady.jpg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/shoe2.jpg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="card">
+          <img src="/img/shoe1.jpeg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3 d-none">
+        <div class="card">
+          <img src="/img/lady.jpg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3 d-none">
+        <div class="card">
+          <img src="/img/lady.jpg" class="card-img-top img">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-warning text-white w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+    <!-- main content done -->
+{% endblock content %}
+
+<!-- about -->
+{% block about %}   {% include "about.html" %}        {% endblock about %}
+<!-- about done -->
+
+<!-- about -->
+{% block contact %}    {% include "contact.html" %}      {% endblock contact %}
+<!-- about done-->
+
+<!-- team -->
+{% block team %}     {% include "team.html" %}        {% endblock team %}
+<!-- team done-->
+
+<!-- footer-->
+{% block footer %}  {% include "footer.html" %}   {% endblock footer %}
+<!-- footer done-->       
